@@ -8,9 +8,16 @@ public class Practise {
         System.out.println("Hej " + userName);
     }
 
+    public void userAlder(){
+        System.out.println("Hvor gammel er du?");
+        int userAlder = scan.nextInt();
+        System.out.println("Du er " + userAlder + " år gammel");
+    }
+
 
     public void start(){
         hvadHedderdu();
+        userAlder();
     }
 
     public static void main(String[] args){
