@@ -2,9 +2,13 @@ import java.util.Scanner;
 
 public class Practise {
     Scanner scan = new Scanner(System.in);
+
+    private Beregninger beregninger = new Beregninger();
+
     public void hvadHedderdu(){
         System.out.println("Hej, hvad hedder du?");
         String userName = scan.next();
+        beregninger.setUserName(userName);
         System.out.println("Hej " + userName);
     }
 
@@ -15,9 +19,9 @@ public class Practise {
     }
 
     public void fritid(){
-        System.out.print("Hvad laver du i din fritid?");
+        System.out.println("Hvad laver du i din fritid?");
         String userFritid = scan.next();
-        System.out.println("Okay, du hedder");
+        System.out.println("Okay, du hedder " + beregninger.getUserName() +" og kan lide " + userFritid + " i din fritid, hvad ellers?");
     }
 
     public void start(){
