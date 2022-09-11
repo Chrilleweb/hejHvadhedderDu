@@ -15,6 +15,7 @@ public class Practise {
     public void userAlder(){
         System.out.println("Hvor gammel er du?");
         int userAlder = scan.nextInt();
+        beregninger.setUserAlder(userAlder);
         System.out.println("Du er " + userAlder + " år gammel");
     }
 
@@ -24,10 +25,18 @@ public class Practise {
         System.out.println("Okay, du hedder " + beregninger.getUserName() +" og kan lide " + userFritid + " i din fritid, hvad ellers?");
     }
 
+    public void tid(){
+        System.out.println("du er "
+                + beregninger.getUserAlder()
+                + " år gammel, det vil sige du er født i "
+                + beregninger.getTal());
+    }
+
     public void start(){
         hvadHedderdu();
         userAlder();
         fritid();
+        tid();
     }
 
     public static void main(String[] args){
